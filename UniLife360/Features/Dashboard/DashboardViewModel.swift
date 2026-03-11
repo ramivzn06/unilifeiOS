@@ -9,8 +9,8 @@ final class DashboardViewModel {
     var aiLoading = true
 
     // Stats
-    var totalBudget: Decimal = 1200
-    var totalExpenses: Decimal = 946.28
+    var totalBudget: Double = 1200
+    var totalExpenses: Double = 946.28
     var todayCourses: [(time: String, name: String, room: String, isActive: Bool)] = [
         ("08:30", "Algorithmique", "Amphi B2", false),
         ("10:00", "Mathématiques", "Salle 204", true),
@@ -22,7 +22,7 @@ final class DashboardViewModel {
         return min(100, Int((totalExpenses / totalBudget) * 100))
     }
 
-    var remainingBudget: Decimal {
+    var remainingBudget: Double {
         totalBudget - totalExpenses
     }
 
@@ -59,7 +59,7 @@ final class DashboardViewModel {
                 .value
 
             let monthStart = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Date()))!
-            let monthExpenses = expenses.filter { $0.date >= monthStart && $0.transactionType == .expense }
+            let monthExpenses = expenses.filter { $0.date >= monthStart && $0.type == .expense }
             totalExpenses = monthExpenses.reduce(0) { $0 + $1.amount }
 
             if let profile: FinancialProfile = try? await supabase.from("financial_profiles")

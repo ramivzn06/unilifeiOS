@@ -19,23 +19,23 @@ final class FinanceViewModel {
 
     private let supabase = SupabaseManager.shared.client
 
-    var monthlyBudget: Decimal {
+    var monthlyBudget: Double {
         financialProfile?.monthlyBudget ?? 1200
     }
 
-    var totalExpenses: Decimal {
+    var totalExpenses: Double {
         expenses
-            .filter { $0.transactionType == .expense }
+            .filter { $0.type == .expense }
             .reduce(0) { $0 + $1.amount }
     }
 
-    var totalIncome: Decimal {
+    var totalIncome: Double {
         expenses
-            .filter { $0.transactionType == .income }
+            .filter { $0.type == .income }
             .reduce(0) { $0 + $1.amount }
     }
 
-    var remainingBudget: Decimal {
+    var remainingBudget: Double {
         monthlyBudget - totalExpenses
     }
 
@@ -49,9 +49,9 @@ final class FinanceViewModel {
         return expenses.filter { $0.category == filter }
     }
 
-    var expensesByCategory: [(category: TransactionCategory, total: Decimal)] {
-        var dict: [TransactionCategory: Decimal] = [:]
-        for expense in expenses where expense.transactionType == .expense {
+    var expensesByCategory: [(category: TransactionCategory, total: Double)] {
+        var dict: [TransactionCategory: Double] = [:]
+        for expense in expenses where expense.type == .expense {
             dict[expense.category, default: 0] += expense.amount
         }
         return dict.sorted { $0.value > $1.value }.map { (category: $0.key, total: $0.value) }
@@ -99,7 +99,7 @@ final class FinanceViewModel {
     }
 
     func addTransaction() async {
-        guard let amount = Decimal(string: newAmount), amount > 0 else { return }
+        guard let amount = Double(newAmount), amount > 0 else { return }
 
         do {
             let session = try await supabase.auth.session
@@ -109,10 +109,9 @@ final class FinanceViewModel {
                 "amount": "\(amount)",
                 "category": newCategory.rawValue,
                 "description": newDescription,
-                "transaction_type": newType.rawValue,
+                "type": newType.rawValue,
                 "date": ISO8601DateFormatter().string(from: newDate),
-                "recurrence": "none",
-                "is_fixed_charge": "false"
+                "is_recurring": "false"
             ]
 
             try await supabase.from("expenses")

@@ -8,7 +8,7 @@ struct Circle: Codable, Identifiable, Hashable {
     var avatarUrl: String?
     var category: String?
     var isPublic: Bool
-    var memberCount: Int
+    var memberCount: Int = 0
     let createdAt: Date
 
     enum CodingKeys: String, CodingKey {

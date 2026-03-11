@@ -226,12 +226,13 @@ struct DashboardView: View {
                     .frame(maxWidth: .infinity)
 
                     // Progress Ring
-                    ProgressRing(
-                        progress: Double(viewModel.budgetUsedPercent) / 100.0,
-                        lineWidth: 8,
-                        size: 80,
-                        color: Color(hex: "#4ade80")
-                    ) {
+                    ZStack {
+                        ProgressRing(
+                            progress: Double(viewModel.budgetUsedPercent) / 100.0,
+                            lineWidth: 8,
+                            size: 80,
+                            foregroundColor: Color(hex: "#4ade80")
+                        )
                         VStack(spacing: 1) {
                             Text("\(viewModel.budgetUsedPercent)%")
                                 .font(.system(size: 16, weight: .heavy))
@@ -326,12 +327,13 @@ struct DashboardView: View {
                 .background(Color(hex: "#fdba74"))
 
                 VStack(spacing: 10) {
-                    ProgressRing(
-                        progress: 0.75,
-                        lineWidth: 6,
-                        size: 60,
-                        color: Color(hex: "#fb923c")
-                    ) {
+                    ZStack {
+                        ProgressRing(
+                            progress: 0.75,
+                            lineWidth: 6,
+                            size: 60,
+                            foregroundColor: Color(hex: "#fb923c")
+                        )
                         VStack(spacing: 0) {
                             Text("3/4")
                                 .font(.system(size: 14, weight: .heavy))

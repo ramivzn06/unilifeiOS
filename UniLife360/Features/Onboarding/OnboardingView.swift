@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    var onComplete: (() -> Void)?
     @State private var viewModel = OnboardingViewModel()
 
     var body: some View {
@@ -83,7 +84,10 @@ struct OnboardingView: View {
 
                 Button {
                     if viewModel.currentStep == viewModel.totalSteps - 1 {
-                        Task { await viewModel.completeOnboarding() }
+                        Task {
+                            await viewModel.completeOnboarding()
+                            onComplete?()
+                        }
                     } else {
                         viewModel.nextStep()
                     }

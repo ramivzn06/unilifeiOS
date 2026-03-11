@@ -34,12 +34,12 @@ struct SocialEventDetailView: View {
 
                 // Info cards
                 VStack(spacing: 12) {
-                    infoRow(icon: "calendar", label: "Date", value: dateString(event.startDate))
+                    infoRow(icon: "calendar", label: "Date", value: dateString(event.startTime))
                     if let location = event.location {
                         infoRow(icon: "mappin.and.ellipse", label: "Lieu", value: location)
                     }
-                    infoRow(icon: "person.2", label: "Participants", value: "\(event.currentParticipants)\(event.maxParticipants.map { "/\($0)" } ?? "")")
-                    if let price = event.price {
+                    infoRow(icon: "person.2", label: "Participants", value: "\(event.maxAttendees.map { "\($0) max" } ?? "Illimité")")
+                    if let price = event.ticketPrice {
                         infoRow(icon: "banknote", label: "Prix", value: price > 0 ? String(format: "%.2f€", price) : "Gratuit")
                     }
                 }

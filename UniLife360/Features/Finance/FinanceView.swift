@@ -82,12 +82,13 @@ struct FinanceView: View {
     private var budgetCard: some View {
         VStack(spacing: 16) {
             HStack {
-                ProgressRing(
-                    progress: Double(viewModel.budgetUsedPercent) / 100.0,
-                    lineWidth: 12,
-                    size: 140,
-                    color: Color(hex: "#4ade80")
-                ) {
+                ZStack {
+                    ProgressRing(
+                        progress: Double(viewModel.budgetUsedPercent) / 100.0,
+                        lineWidth: 12,
+                        size: 140,
+                        foregroundColor: Color(hex: "#4ade80")
+                    )
                     VStack(spacing: 2) {
                         Text("Dépensé")
                             .font(.system(size: 10, weight: .bold))
@@ -130,7 +131,7 @@ struct FinanceView: View {
     }
 
     // MARK: - Stat Card
-    private func statCard(title: String, amount: Decimal, icon: String, color: String, isPositive: Bool) -> some View {
+    private func statCard(title: String, amount: Double, icon: String, color: String, isPositive: Bool) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Text(title)
@@ -172,7 +173,7 @@ struct FinanceView: View {
                             .font(.system(size: 13, weight: .bold))
                         GeometryReader { geo in
                             let width = viewModel.totalExpenses > 0
-                                ? CGFloat(NSDecimalNumber(decimal: item.total / viewModel.totalExpenses).doubleValue) * geo.size.width
+                                ? CGFloat(item.total / viewModel.totalExpenses) * geo.size.width
                                 : 0
                             RoundedRectangle(cornerRadius: 3)
                                 .fill(Color(hex: "#86efac"))

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Note: Codable, Identifiable {
+struct Note: Codable, Identifiable, Hashable {
     let id: UUID
     let userId: UUID
     var courseId: UUID?

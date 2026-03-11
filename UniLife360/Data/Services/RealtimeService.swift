@@ -11,10 +11,11 @@ final class RealtimeService {
     private init() {}
 
     func subscribeToMessages(
-        conversationId: UUID,
+        userId: UUID,
+        otherUserId: UUID,
         onMessage: @escaping (DirectMessage) -> Void
     ) async {
-        let channelKey = "messages:\(conversationId)"
+        let channelKey = "messages:\(userId):\(otherUserId)"
 
         // Remove existing channel if any
         if let existing = channels[channelKey] {
@@ -23,10 +24,11 @@ final class RealtimeService {
 
         let channel = SupabaseManager.shared.client.realtimeV2.channel(channelKey)
 
+        // Listen for messages sent TO me from this user
         let changes = channel.postgresChange(
             InsertAction.self,
             table: "direct_messages",
-            filter: "conversation_id=eq.\(conversationId.uuidString)"
+            filter: "receiver_id=eq.\(userId.uuidString)"
         )
 
         await channel.subscribe()
@@ -35,8 +37,11 @@ final class RealtimeService {
         Task {
             for await change in changes {
                 if let message = try? change.decodeRecord(as: DirectMessage.self, decoder: JSONDecoder()) {
-                    await MainActor.run {
-                        onMessage(message)
+                    // Only show messages from the other user in this conversation
+                    if message.senderId == otherUserId {
+                        await MainActor.run {
+                            onMessage(message)
+                        }
                     }
                 }
             }

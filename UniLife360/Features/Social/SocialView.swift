@@ -77,8 +77,8 @@ struct SocialView: View {
     private func socialEventCard(_ event: SocialEvent) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
-                if let category = event.category {
-                    Text(category)
+                if let tags = event.tags, let first = tags.first {
+                    Text(first)
                         .font(.caption2)
                         .fontWeight(.bold)
                         .padding(.horizontal, 8)
@@ -87,7 +87,7 @@ struct SocialView: View {
                         .clipShape(Capsule())
                 }
                 Spacer()
-                Text(event.startDate, style: .date)
+                Text(event.startTime, style: .date)
                     .font(.caption2)
                     .foregroundColor(Theme.textSecondary)
             }
@@ -110,11 +110,11 @@ struct SocialView: View {
                         .foregroundColor(Theme.textSecondary)
                 }
 
-                Label("\(event.currentParticipants)", systemImage: "person.2")
+                Label("Inscrit", systemImage: "person.2")
                     .font(.caption2)
                     .foregroundColor(Theme.textSecondary)
 
-                if let price = event.price, price > 0 {
+                if let price = event.ticketPrice, price > 0 {
                     Text(String(format: "%.0f€", price))
                         .font(.caption)
                         .fontWeight(.bold)
