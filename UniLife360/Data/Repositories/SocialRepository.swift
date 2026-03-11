@@ -82,13 +82,15 @@ struct SocialRepository {
             .from("circles")
             .select()
             .eq("is_public", value: "true")
-            .limit(20)
 
         if let query, !query.isEmpty {
             dbQuery = dbQuery.ilike("name", pattern: "%\(query)%")
         }
 
-        return try await dbQuery.execute().value
+        return try await dbQuery
+            .limit(20)
+            .execute()
+            .value
     }
 
     func joinCircle(circleId: UUID, userId: UUID) async throws {

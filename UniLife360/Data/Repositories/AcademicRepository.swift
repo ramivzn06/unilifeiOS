@@ -35,13 +35,15 @@ struct AcademicRepository {
             .from("notes")
             .select()
             .eq("user_id", value: userId.uuidString)
-            .order("updated_at", ascending: false)
 
         if let courseId {
             query = query.eq("course_id", value: courseId.uuidString)
         }
 
-        return try await query.execute().value
+        return try await query
+            .order("updated_at", ascending: false)
+            .execute()
+            .value
     }
 
     func getNote(id: UUID) async throws -> Note {

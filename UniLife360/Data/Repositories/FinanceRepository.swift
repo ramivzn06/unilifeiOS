@@ -8,7 +8,6 @@ struct FinanceRepository {
             .from("expenses")
             .select()
             .eq("user_id", value: userId.uuidString)
-            .order("date", ascending: false)
 
         if let month {
             let calendar = Calendar.current
@@ -21,7 +20,10 @@ struct FinanceRepository {
                 .lt("date", value: formatter.string(from: end))
         }
 
-        return try await query.execute().value
+        return try await query
+            .order("date", ascending: false)
+            .execute()
+            .value
     }
 
     func addExpense(_ expense: Expense) async throws {

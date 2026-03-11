@@ -8,7 +8,6 @@ struct CareerRepository {
             .from("jobs")
             .select("*, company:companies(*)")
             .eq("is_active", value: "true")
-            .order("created_at", ascending: false)
 
         if let type {
             query = query.eq("type", value: type.rawValue)
@@ -18,7 +17,11 @@ struct CareerRepository {
             query = query.eq("is_remote", value: String(isRemote))
         }
 
-        return try await query.limit(30).execute().value
+        return try await query
+            .order("created_at", ascending: false)
+            .limit(30)
+            .execute()
+            .value
     }
 
     func getJob(id: UUID) async throws -> Job {
