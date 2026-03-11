@@ -15,7 +15,7 @@ struct EmptyStateView: View {
                 .foregroundColor(Theme.textSecondary.opacity(0.5))
                 .frame(width: 96, height: 96)
                 .background(Color.gray.opacity(0.08))
-                .clipShape(Circle())
+                .clipShape(SwiftUI.Circle())
 
             VStack(spacing: 8) {
                 Text(title)

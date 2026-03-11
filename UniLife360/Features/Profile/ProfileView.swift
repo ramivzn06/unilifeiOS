@@ -15,7 +15,7 @@ struct ProfileView: View {
                     // Avatar with gradient ring
                     VStack(spacing: 16) {
                         ZStack {
-                            Circle()
+                            SwiftUI.Circle()
                                 .stroke(
                                     LinearGradient(
                                         colors: [ModuleColors.finance, ModuleColors.studies, ModuleColors.social, ModuleColors.sport],
@@ -30,7 +30,7 @@ struct ProfileView: View {
                                 .font(.system(size: 40, weight: .bold))
                                 .frame(width: 88, height: 88)
                                 .background(Color.white)
-                                .clipShape(Circle())
+                                .clipShape(SwiftUI.Circle())
                         }
                         .shadow(color: .black.opacity(0.85), radius: 0, x: 4, y: 4)
 

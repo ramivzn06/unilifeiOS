@@ -25,8 +25,8 @@ struct FriendProfileView: View {
                                     endPoint: .bottomTrailing
                                 )
                             )
-                            .clipShape(Circle())
-                            .overlay(Circle().stroke(Theme.border, lineWidth: 2))
+                            .clipShape(SwiftUI.Circle())
+                            .overlay(SwiftUI.Circle().stroke(Theme.border, lineWidth: 2))
                             .shadow(color: .black.opacity(0.85), radius: 0, x: 3, y: 3)
 
                         Text(user.fullName ?? "Utilisateur")

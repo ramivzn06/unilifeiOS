@@ -34,7 +34,7 @@ struct FriendRequestsView: View {
                 .font(.headline)
                 .frame(width: 44, height: 44)
                 .background(ModuleColors.social.opacity(0.2))
-                .clipShape(Circle())
+                .clipShape(SwiftUI.Circle())
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(request.fromUser?.fullName ?? "Utilisateur")
@@ -56,8 +56,8 @@ struct FriendRequestsView: View {
                         .foregroundColor(.black)
                         .frame(width: 36, height: 36)
                         .background(ModuleColors.finance)
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(Theme.border, lineWidth: 1))
+                        .clipShape(SwiftUI.Circle())
+                        .overlay(SwiftUI.Circle().stroke(Theme.border, lineWidth: 1))
                 }
 
                 Button(action: { decline(request) }) {
@@ -66,8 +66,8 @@ struct FriendRequestsView: View {
                         .foregroundColor(.black)
                         .frame(width: 36, height: 36)
                         .background(Color(hex: "#fca5a5"))
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(Theme.border, lineWidth: 1))
+                        .clipShape(SwiftUI.Circle())
+                        .overlay(SwiftUI.Circle().stroke(Theme.border, lineWidth: 1))
                 }
             }
         }

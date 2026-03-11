@@ -280,7 +280,7 @@ struct DashboardView: View {
                 VStack(alignment: .leading, spacing: 6) {
                     ForEach(Array(viewModel.todayCourses.enumerated()), id: \.offset) { _, course in
                         HStack(spacing: 8) {
-                            Circle()
+                            SwiftUI.Circle()
                                 .fill(course.isActive ? Color(hex: "#fdba74") : Color.gray.opacity(0.3))
                                 .frame(width: 8, height: 8)
                             VStack(alignment: .leading, spacing: 1) {
@@ -447,14 +447,14 @@ struct DashboardView: View {
 
                     HStack(spacing: -6) {
                         ForEach(0..<5, id: \.self) { i in
-                            Circle()
+                            SwiftUI.Circle()
                                 .fill(Color(hex: ["#86efac", "#d8b4fe", "#f9a8d4", "#fdba74", "#86efac"][i]))
                                 .frame(width: 24, height: 24)
                                 .overlay(
                                     Text(String(Character(UnicodeScalar(65 + i)!)))
                                         .font(.system(size: 9, weight: .heavy))
                                 )
-                                .overlay(Circle().stroke(Color.white, lineWidth: 1.5))
+                                .overlay(SwiftUI.Circle().stroke(Color.white, lineWidth: 1.5))
                         }
                         Text("+23")
                             .font(.system(size: 9, weight: .bold))

@@ -11,11 +11,11 @@ struct ProgressRing: View {
     var body: some View {
         ZStack {
             // Background circle
-            Circle()
+            SwiftUI.Circle()
                 .stroke(backgroundColor, lineWidth: lineWidth)
 
             // Progress arc
-            Circle()
+            SwiftUI.Circle()
                 .trim(from: 0, to: min(progress, 1.0))
                 .stroke(
                     foregroundColor,
