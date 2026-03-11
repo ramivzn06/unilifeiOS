@@ -1,8 +1,8 @@
 import Foundation
 
 enum AppConfig {
-    static let supabaseURL = URL(string: "https://wpankbozgzatrprryzra.supabase.co")!
-    static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndwYW5rYm96Z3phdHJwcnJ5enJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2ODU3MzIsImV4cCI6MjA4NjI2MTczMn0.K2rvElovl3u_1ByLw0cVMf2D3pgk9E8Gv9X4jeC2Q-g"
+    static let supabaseURL = URL(string: "https://pzjbjsqfhelgjkpebddl.supabase.co")!
+    static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB6amJqc3FmaGVsZ2prcGViZGRsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjg0NjYsImV4cCI6MjA4ODc0NDQ2Nn0.5D-sH0CHc4WCX7zSnEBHZzj3k3fbuc2XVgp6xcK8zFM"
 
     // API base URL for AI features (Next.js deployed app)
     static let apiBaseURL = URL(string: "https://unilife360.vercel.app")!
