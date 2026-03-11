@@ -120,6 +120,70 @@ struct RegisterView: View {
                 )
                 .shadow(color: .black, radius: 0, x: 4, y: 4)
 
+                // MARK: - Divider
+                HStack {
+                    Rectangle()
+                        .fill(Color(hex: "#0a0a0a").opacity(0.2))
+                        .frame(height: 1)
+                    Text("ou")
+                        .font(.system(size: 12, weight: .bold))
+                        .foregroundStyle(.secondary)
+                    Rectangle()
+                        .fill(Color(hex: "#0a0a0a").opacity(0.2))
+                        .frame(height: 1)
+                }
+
+                // MARK: - Social Sign-In Buttons
+                VStack(spacing: 12) {
+                    // Apple Sign-In
+                    Button {
+                        HapticFeedback.tap()
+                        viewModel.startAppleSignIn()
+                    } label: {
+                        HStack(spacing: 8) {
+                            Image(systemName: "apple.logo")
+                                .font(.system(size: 18))
+                            Text("S'inscrire avec Apple")
+                                .font(.system(size: 15, weight: .bold))
+                        }
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                        .background(Color(hex: "#0a0a0a"))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color(hex: "#0a0a0a"), lineWidth: 2)
+                        )
+                        .shadow(color: .black.opacity(0.3), radius: 0, x: 3, y: 3)
+                    }
+                    .disabled(viewModel.isLoading)
+
+                    // Google Sign-In
+                    Button {
+                        HapticFeedback.tap()
+                        Task { await viewModel.startGoogleSignIn() }
+                    } label: {
+                        HStack(spacing: 8) {
+                            Image(systemName: "globe")
+                                .font(.system(size: 16, weight: .semibold))
+                            Text("S'inscrire avec Google")
+                                .font(.system(size: 15, weight: .bold))
+                        }
+                        .foregroundStyle(Color(hex: "#0a0a0a"))
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color(hex: "#0a0a0a"), lineWidth: 2)
+                        )
+                        .shadow(color: .black.opacity(0.3), radius: 0, x: 3, y: 3)
+                    }
+                    .disabled(viewModel.isLoading)
+                }
+
                 // MARK: - Back to login
                 HStack(spacing: 4) {
                     Text("Déjà un compte ?")
