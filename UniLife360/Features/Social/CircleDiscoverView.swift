@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CircleDiscoverView: View {
-    @State private var circles: [Circle] = []
+    @State private var circles: [StudyCircle] = []
     @State private var searchText = ""
     @State private var isLoading = false
     private let repository = SocialRepository()
@@ -41,7 +41,7 @@ struct CircleDiscoverView: View {
         .task { await search() }
     }
 
-    private func discoverCard(_ circle: Circle) -> some View {
+    private func discoverCard(_ circle: StudyCircle) -> some View {
         HStack(spacing: 12) {
             Text(String(circle.name.prefix(1)).uppercased())
                 .font(.title3)

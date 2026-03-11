@@ -19,7 +19,7 @@ enum AppDestination: Hashable {
 
     // Social
     case socialEventDetail(SocialEvent)
-    case circleDetail(Circle)
+    case circleDetail(StudyCircle)
     case circleDiscover
 
     // Friends

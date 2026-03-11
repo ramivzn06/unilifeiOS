@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SocialView: View {
     @State private var events: [SocialEvent] = []
-    @State private var circles: [Circle] = []
+    @State private var circles: [StudyCircle] = []
     @State private var isLoading = false
     @State private var selectedTab = 0
     private let repository = SocialRepository()
@@ -162,7 +162,7 @@ struct SocialView: View {
         }
     }
 
-    private func circleCard(_ circle: Circle) -> some View {
+    private func circleCard(_ circle: StudyCircle) -> some View {
         HStack(spacing: 12) {
             Text(String(circle.name.prefix(1)).uppercased())
                 .font(.title3)

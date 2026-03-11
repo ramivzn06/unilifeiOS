@@ -1,6 +1,6 @@
 import Foundation
 
-struct Circle: Codable, Identifiable, Hashable {
+struct StudyCircle: Codable, Identifiable, Hashable {
     let id: UUID
     let createdBy: UUID
     var name: String

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CircleDetailView: View {
-    let circle: Circle
+    let circle: StudyCircle
 
     var body: some View {
         ScrollView {

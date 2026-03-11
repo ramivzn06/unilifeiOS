@@ -58,7 +58,7 @@ struct SocialRepository {
     }
 
     // MARK: - Circles
-    func getCircles(userId: UUID) async throws -> [Circle] {
+    func getCircles(userId: UUID) async throws -> [StudyCircle] {
         try await client
             .from("circle_members")
             .select("circle:circles(*)")
@@ -67,7 +67,7 @@ struct SocialRepository {
             .value
     }
 
-    func getCircle(id: UUID) async throws -> Circle {
+    func getCircle(id: UUID) async throws -> StudyCircle {
         try await client
             .from("circles")
             .select()
@@ -77,7 +77,7 @@ struct SocialRepository {
             .value
     }
 
-    func discoverCircles(query: String? = nil) async throws -> [Circle] {
+    func discoverCircles(query: String? = nil) async throws -> [StudyCircle] {
         var dbQuery = client
             .from("circles")
             .select()
