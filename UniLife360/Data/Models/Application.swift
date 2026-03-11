@@ -1,6 +1,6 @@
 import Foundation
 
-struct JobApplication: Codable, Identifiable {
+struct JobApplication: Codable, Identifiable, Hashable {
     let id: UUID
     let jobId: UUID
     let userId: UUID
