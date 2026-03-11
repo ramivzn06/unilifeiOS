@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ChatView: View {
-    let conversation: DMConversation
+    let otherUser: AppUser
     @State private var messages: [DirectMessage] = []
     @State private var inputText = ""
     @State private var isLoading = false
@@ -13,7 +13,7 @@ struct ChatView: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     LazyVStack(spacing: 8) {
-                        ForEach(messages.reversed()) { message in
+                        ForEach(messages) { message in
                             messageBubble(message)
                                 .id(message.id)
                         }
@@ -52,16 +52,13 @@ struct ChatView: View {
             .background(Theme.background)
         }
         .background(Theme.background.ignoresSafeArea())
-        .navigationTitle(conversation.otherUser?.fullName ?? "Chat")
+        .navigationTitle(otherUser.fullName ?? "Chat")
         .navigationBarTitleDisplayMode(.inline)
-        .task {
-            await loadMessages()
-            await subscribeToNewMessages()
-        }
+        .task { await loadMessages() }
     }
 
     private func messageBubble(_ message: DirectMessage) -> some View {
-        let isMe = message.senderId != (conversation.otherUser?.id ?? UUID())
+        let isMe = message.senderId != otherUser.id
 
         return HStack {
             if isMe { Spacer() }
@@ -91,23 +88,19 @@ struct ChatView: View {
         Task {
             guard let userId = await SupabaseManager.shared.currentUserId else { return }
             try? await repository.sendMessage(
-                conversationId: conversation.id,
                 senderId: userId,
+                receiverId: otherUser.id,
                 content: content
             )
+            await loadMessages()
         }
     }
 
     private func loadMessages() async {
-        messages = (try? await repository.getMessages(conversationId: conversation.id)) ?? []
-    }
-
-    private func subscribeToNewMessages() async {
-        await RealtimeService.shared.subscribeToMessages(conversationId: conversation.id) { message in
-            if !messages.contains(where: { $0.id == message.id }) {
-                messages.append(message)
-                HapticFeedback.light()
-            }
-        }
+        guard let userId = await SupabaseManager.shared.currentUserId else { return }
+        messages = (try? await repository.getMessages(
+            senderId: userId,
+            receiverId: otherUser.id
+        )) ?? []
     }
 }

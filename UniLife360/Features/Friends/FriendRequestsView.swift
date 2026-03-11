@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FriendRequestsView: View {
-    @State private var requests: [Friendship] = []
+    @State private var requests: [FriendRequest] = []
     @State private var isLoading = false
     private let repository = FriendsRepository()
 
@@ -28,19 +28,19 @@ struct FriendRequestsView: View {
         .task { await loadRequests() }
     }
 
-    private func requestCard(_ request: Friendship) -> some View {
+    private func requestCard(_ request: FriendRequest) -> some View {
         HStack(spacing: 12) {
-            Text(String(request.requester?.fullName?.prefix(1) ?? "?").uppercased())
+            Text(String(request.fromUser?.fullName?.prefix(1) ?? "?").uppercased())
                 .font(.headline)
                 .frame(width: 44, height: 44)
                 .background(ModuleColors.social.opacity(0.2))
                 .clipShape(Circle())
 
             VStack(alignment: .leading, spacing: 2) {
-                Text(request.requester?.fullName ?? "Utilisateur")
+                Text(request.fromUser?.fullName ?? "Utilisateur")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                if let university = request.requester?.university {
+                if let university = request.fromUser?.university {
                     Text(university)
                         .font(.caption)
                         .foregroundColor(Theme.textSecondary)
@@ -74,15 +74,19 @@ struct FriendRequestsView: View {
         .brutalistCard()
     }
 
-    private func accept(_ request: Friendship) {
+    private func accept(_ request: FriendRequest) {
         Task {
-            try? await repository.acceptFriendRequest(id: request.id)
+            try? await repository.acceptFriendRequest(
+                id: request.id,
+                fromUserId: request.fromUserId,
+                toUserId: request.toUserId
+            )
             requests.removeAll { $0.id == request.id }
             HapticFeedback.success()
         }
     }
 
-    private func decline(_ request: Friendship) {
+    private func decline(_ request: FriendRequest) {
         Task {
             try? await repository.declineFriendRequest(id: request.id)
             requests.removeAll { $0.id == request.id }

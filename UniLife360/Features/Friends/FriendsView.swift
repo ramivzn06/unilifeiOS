@@ -2,8 +2,7 @@ import SwiftUI
 
 struct FriendsView: View {
     @State private var friends: [Friendship] = []
-    @State private var conversations: [DMConversation] = []
-    @State private var pendingRequests: [Friendship] = []
+    @State private var pendingRequests: [FriendRequest] = []
     @State private var isLoading = false
     @State private var selectedTab = 0
     private let repository = FriendsRepository()
@@ -38,21 +37,8 @@ struct FriendsView: View {
                     .padding(.horizontal)
                 }
 
-                // Tab selector
-                HStack(spacing: 0) {
-                    tabButton("Amis", index: 0)
-                    tabButton("Messages", index: 1)
-                }
-                .background(Color.white)
-                .brutalistBorder()
-                .shadow(color: .black.opacity(0.3), radius: 0, x: 2, y: 2)
-                .padding(.horizontal)
-
-                if selectedTab == 0 {
-                    friendsList
-                } else {
-                    messagesList
-                }
+                // Friends list
+                friendsList
             }
             .padding(.bottom, 32)
         }
@@ -60,24 +46,9 @@ struct FriendsView: View {
         .task { await loadData() }
     }
 
-    private func tabButton(_ title: String, index: Int) -> some View {
-        Button(action: {
-            withAnimation(.spring(response: 0.3)) { selectedTab = index }
-            HapticFeedback.selection()
-        }) {
-            Text(title)
-                .font(.subheadline)
-                .fontWeight(selectedTab == index ? .bold : .medium)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 12)
-                .background(selectedTab == index ? ModuleColors.social.opacity(0.3) : Color.clear)
-        }
-        .buttonStyle(.plain)
-    }
-
     private var friendsList: some View {
         LazyVStack(spacing: 8) {
-            if friends.isEmpty {
+            if friends.isEmpty && !isLoading {
                 EmptyStateView(
                     icon: "person.2",
                     title: "Aucun ami",
@@ -93,7 +64,7 @@ struct FriendsView: View {
     }
 
     private func friendRow(_ friendship: Friendship) -> some View {
-        let friend = friendship.requester ?? friendship.addressee
+        let friend = friendship.friend
         return HStack(spacing: 12) {
             // Avatar
             Text(String(friend?.fullName?.prefix(1) ?? "?").uppercased())
@@ -116,71 +87,10 @@ struct FriendsView: View {
 
             Spacer()
 
-            Button(action: {}) {
-                Image(systemName: "message.fill")
-                    .foregroundColor(ModuleColors.social)
-            }
-        }
-        .brutalistCard()
-    }
-
-    private var messagesList: some View {
-        LazyVStack(spacing: 8) {
-            if conversations.isEmpty {
-                EmptyStateView(
-                    icon: "message",
-                    title: "Aucune conversation",
-                    message: "Envoyez un message à un ami pour commencer"
-                )
-            } else {
-                ForEach(conversations) { conversation in
-                    NavigationLink(value: AppDestination.chat(conversation)) {
-                        conversationRow(conversation)
-                    }
-                    .buttonStyle(.plain)
-                }
-            }
-        }
-        .padding(.horizontal)
-    }
-
-    private func conversationRow(_ conversation: DMConversation) -> some View {
-        HStack(spacing: 12) {
-            Text("?")
-                .font(.headline)
-                .frame(width: 44, height: 44)
-                .background(ModuleColors.social.opacity(0.2))
-                .clipShape(Circle())
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(conversation.otherUser?.fullName ?? "Conversation")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Theme.text)
-                if let lastMessage = conversation.lastMessage {
-                    Text(lastMessage)
-                        .font(.caption)
-                        .foregroundColor(Theme.textSecondary)
-                        .lineLimit(1)
-                }
-            }
-
-            Spacer()
-
-            VStack(alignment: .trailing, spacing: 4) {
-                if let lastAt = conversation.lastMessageAt {
-                    Text(lastAt, style: .relative)
-                        .font(.caption2)
-                        .foregroundColor(Theme.textSecondary)
-                }
-                if conversation.unreadCount > 0 {
-                    Text("\(conversation.unreadCount)")
-                        .font(.caption2)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .frame(width: 20, height: 20)
-                        .background(ModuleColors.social)
-                        .clipShape(Circle())
+            if let friend = friend {
+                NavigationLink(value: AppDestination.chat(friend)) {
+                    Image(systemName: "message.fill")
+                        .foregroundColor(ModuleColors.social)
                 }
             }
         }
@@ -191,7 +101,6 @@ struct FriendsView: View {
         guard let userId = await SupabaseManager.shared.currentUserId else { return }
         isLoading = true
         friends = (try? await repository.getFriends(userId: userId)) ?? []
-        conversations = (try? await repository.getConversations(userId: userId)) ?? []
         pendingRequests = (try? await repository.getPendingRequests(userId: userId)) ?? []
         isLoading = false
     }

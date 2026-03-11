@@ -71,7 +71,7 @@ struct TabBarView: View {
         case .financeDetail:
             FinanceView()
         case .newTransaction:
-            NewTransactionView()
+            NewTransactionView(viewModel: FinanceViewModel())
         case .budgetSettings:
             Text("Budget Settings")
         case .financeAdvisor:
@@ -96,8 +96,8 @@ struct TabBarView: View {
             CircleDiscoverView()
         case .friendProfile(let userId):
             FriendProfileView(userId: userId)
-        case .chat(let conversation):
-            ChatView(conversation: conversation)
+        case .chat(let user):
+            ChatView(otherUser: user)
         case .friendRequests:
             FriendRequestsView()
         case .jobDetail(let job):

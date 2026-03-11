@@ -11,7 +11,7 @@ struct TransactionRow: View {
                 .font(.system(size: 16))
                 .frame(width: 40, height: 40)
                 .background(
-                    expense.transactionType == .income
+                    expense.type == .income
                         ? Color(hex: "#86efac").opacity(0.2)
                         : Color(hex: "#fca5a5").opacity(0.2)
                 )
@@ -32,7 +32,7 @@ struct TransactionRow: View {
                         .font(.system(size: 11, weight: .medium))
                         .foregroundStyle(.secondary)
 
-                    if let merchant = expense.merchantName {
+                    if let merchant = expense.merchant {
                         Text("· \(merchant)")
                             .font(.system(size: 11, weight: .medium))
                             .foregroundStyle(.secondary)
@@ -45,9 +45,9 @@ struct TransactionRow: View {
 
             // Amount + Date
             VStack(alignment: .trailing, spacing: 3) {
-                Text(expense.transactionType == .income ? "+\(expense.amount.formatted())" : "-\(expense.amount.formatted())")
+                Text(expense.type == .income ? "+\(expense.amount.formatted())" : "-\(expense.amount.formatted())")
                     .font(.system(size: 14, weight: .heavy))
-                    .foregroundStyle(expense.transactionType == .income ? Color(hex: "#16a34a") : .red)
+                    .foregroundStyle(expense.type == .income ? Color(hex: "#16a34a") : .red)
 
                 Text(expense.date.formatted(date: .abbreviated, time: .omitted))
                     .font(.system(size: 10, weight: .medium))

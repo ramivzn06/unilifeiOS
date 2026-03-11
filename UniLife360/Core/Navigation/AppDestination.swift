@@ -24,7 +24,7 @@ enum AppDestination: Hashable {
 
     // Friends
     case friendProfile(UUID)
-    case chat(DMConversation)
+    case chat(AppUser)
     case friendRequests
 
     // Career
