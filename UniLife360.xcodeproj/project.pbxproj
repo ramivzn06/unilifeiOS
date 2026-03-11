@@ -1,0 +1,1088 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04F1825A5D570090DD0843C4 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C043428EE5EF1FC9546BEB /* Job.swift */; };
+		06B0D520E83A63C4EC17F6D6 /* TransactionEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A1AAC373BB69391492A367 /* TransactionEnums.swift */; };
+		06CFBE17B95599812B1BA557 /* SocialEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6776FF9F4D9BCC9AF1BABA0E /* SocialEnums.swift */; };
+		091C2F5ADEEC33CB2CE6F052 /* NewTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A4E0A8164D7B83D28B507B /* NewTransactionView.swift */; };
+		096AC0C3F8420106DC4DCD7A /* CareerEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CF296722409B9C5F9D7FF8 /* CareerEnums.swift */; };
+		0C05EAD013F8301E57FF1F32 /* FinanceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6460BF411AEC954E0C037 /* FinanceRepository.swift */; };
+		11F9753F2D2D14AC13D60B82 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C25D78491FD707CF0B22D /* EditProfileView.swift */; };
+		135EEE81254ED22B86F26602 /* AcademicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD91A27F94E9C81ADB4438 /* AcademicView.swift */; };
+		14B6ACAC2724A2A3A3A41093 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C097E7DCE0636DE4FEC49ED /* Theme.swift */; };
+		1768745AA0C9A7861E6AED13 /* FinanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB1102C9C14E9708D23D63 /* FinanceViewModel.swift */; };
+		196384C7D51AF24717BCFF37 /* CircleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458CA9AA47C7108D5FCE0B3 /* CircleDetailView.swift */; };
+		1CDCE43A4061758E03B8D826 /* ModuleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB545CBD263E6A7CCA3DC94D /* ModuleHeader.swift */; };
+		1E9EBD227F7246A4B57A4DED /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD16C163F69F4FA3B528D38 /* TabBarView.swift */; };
+		1ECEF76D7CCF5D594A5D1A2D /* CircleDiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF294C9A35C19DF01F03DC /* CircleDiscoverView.swift */; };
+		1F527D7B9FA38A6AB3D9F94A /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B740F17579853D55AE161 /* NoteDetailView.swift */; };
+		2D66B4D25F11A28F4B616D05 /* StatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBE46E2D6B9CE9148776E4C /* StatCard.swift */; };
+		2EC8095E66DC65EB1677FC06 /* DirectMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F7BC1AB92E3961374FD4AF /* DirectMessage.swift */; };
+		3655DB5387E9CEB8E3C0091C /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8174CB71DECA372F56C0D675 /* CalendarEvent.swift */; };
+		37BD3A9778AD63B47B0910AB /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4639F02908AEC9848BEDF66 /* TransactionRow.swift */; };
+		389CA5CF62A19C42F8F1DC1F /* DMConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F8C252FB1014CA8B9DDFB0 /* DMConversation.swift */; };
+		397B8B8EC387FE5B01C55DB0 /* CircleMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565389D41809BFEF649B5F0 /* CircleMember.swift */; };
+		3B8062966239BE79384B1902 /* ModuleColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F54242E5801FE708FA1884 /* ModuleColors.swift */; };
+		3C8833857E2905986CF222F9 /* FinanceAdvisorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C83717C5D0623EDC9C3E1 /* FinanceAdvisorView.swift */; };
+		3E020594E59533EA43E63000 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468671F003EDF26C7ADEDA0 /* Company.swift */; };
+		4675BBF8B1FA80B2EB166F61 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6C0F59CE7BF4554F913F4 /* DashboardView.swift */; };
+		4773642A4518C7A9F6B94FC8 /* FriendsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BFBC875B3027A0B01F5305 /* FriendsRepository.swift */; };
+		49B4FD0419C9CDE7528E539F /* StudiesStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A494F45936C9A3C6C2CBFB /* StudiesStepView.swift */; };
+		4E8258281CAAEA48959B5B3E /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53BDE46B8AD7440D5CC113F /* SportView.swift */; };
+		4FB7AA1F9585809C580F5F46 /* Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007F257E5B0B2ED9393B2FA1 /* Shadows.swift */; };
+		557E3BADE2B49CB35426166C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACED7C78937DCF3258BADD /* AuthViewModel.swift */; };
+		5912948FA5F6BEA202D3A30B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AE6D5CA2FFDAFEBACAB016 /* ProfileView.swift */; };
+		5EEEEEBFB863FBCB1592A37E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8C9625784A61EB8AA4A0C5 /* Supabase */; };
+		5F4967C8D6BAEC5649218DA9 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078F624E9D3D85986F1102E5 /* AuthRepository.swift */; };
+		5FCC827C6196D9B5C08E5CA6 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE70D9533BBE9C2B9E0198B /* Application.swift */; };
+		614745F0E28260269F1648C7 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2ED8E3FAA346912AD940C /* CareerView.swift */; };
+		61B98E459715E107AEAE4F84 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F7D14AC41E2E2008B851CE /* Circle.swift */; };
+		63101A4E57DAB0BF36B3EAFE /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05552382DA08301F31CCF456 /* ScheduleViewModel.swift */; };
+		63899F96F3C38F32A32BBF36 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469CAC958A8511FF03B2057 /* Note.swift */; };
+		638B6BC2B579CC426F6D7A4C /* EventEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C17E4C1C089934C64DF462 /* EventEnums.swift */; };
+		645B213C638EAF7CD690BEF8 /* BrutalistModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74583D06A4567D7E3D92B90 /* BrutalistModifiers.swift */; };
+		64EFB0067B94F860388A3366 /* UniLife360App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F72EB8D42A0C5CFE92FFF /* UniLife360App.swift */; };
+		68172428F05D8BEEC9E636A8 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0DC6EF3E7A818C6A57545 /* ProgressBar.swift */; };
+		6B3DA301F26B23DDDEC4BD84 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7876A20E5B20E34C110FEEA /* HapticFeedback.swift */; };
+		6BA94A9DD499D3BC7D68A74C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7EBD380DB4BC148F1617AE /* RegisterView.swift */; };
+		6C4F6D792A7785FA4666648E /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F68EB8AE18D4F896DD1F82 /* Typography.swift */; };
+		6C50A1807E9CA5AB22488485 /* Friendship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027DA276668E1052482BA0A /* Friendship.swift */; };
+		71D15FB252CD873EAE3C7DB0 /* AcademicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BC8EBADE2EFC6702D69709 /* AcademicViewModel.swift */; };
+		767F23DDA9154FCAE6414695 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F259F984BEE2DBA8E2FFDF /* ContentView.swift */; };
+		78F5EF8A744D47C13AEB0CDA /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F52133C1715BABD8E41EB /* EmptyStateView.swift */; };
+		7D108A7B7E55C0EFACCC1907 /* FriendRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2081A30BB40D31D298D31E /* FriendRequestsView.swift */; };
+		7D118BC3331C6ECE4588D827 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF47BDEA92E95CCCE011120 /* AppRouter.swift */; };
+		8023692A1A5314A6738B000B /* SummaryStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB858585231D1CDC6CDEE25 /* SummaryStepView.swift */; };
+		8048AB24ECCCD0752FEF6113 /* NewApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46CC12240AA39B6A325D1E4 /* NewApplicationView.swift */; };
+		80FF781D5ED14A292956F318 /* SocialEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C008023445426A2E6CFA69 /* SocialEvent.swift */; };
+		85B724A3168D0754DFA21FDA /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750EA3EEDB781A3DED803B8D /* OnboardingViewModel.swift */; };
+		8637C806A627D70ADBBCC8A7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A851A6A0E07CD8E892C881D4 /* SettingsView.swift */; };
+		8CA0D5EB9829489B971893FC /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA78F80BA61202B334CA5BC /* EventDetailView.swift */; };
+		90910B84B64612B9537F562F /* FriendProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A6C5BC5B896653D58C9FC7 /* FriendProfileView.swift */; };
+		91286518D6BAAE87B01E5856 /* BrutalistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0BB049C00F8940E6DB7E41 /* BrutalistButton.swift */; };
+		933283DDBC373403D0E7948D /* FinancialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11FB211A088B8E254EC62BC /* FinancialProfile.swift */; };
+		9506D214EE739CF8FD197922 /* AppDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25488CA209F22541D1387DE5 /* AppDestination.swift */; };
+		98ADF3D75A0AC10C5A7046E9 /* AcademicEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80BBF56865A9F767F1EFF0A /* AcademicEnums.swift */; };
+		9B208F5B690C7A83ACAE4705 /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ED0E5B7054F105065F7BA3 /* JobDetailView.swift */; };
+		A271B9BCFD62436EDAE92B9E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2329F0730BB0940F3C0E36 /* AuthService.swift */; };
+		A3E1A103101852897FD365E2 /* AcademicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90BE44F1D78B2778A1C253 /* AcademicRepository.swift */; };
+		A41D73FB34232C3DD7BD1D01 /* NewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6626E552F149B38E8F0D9A /* NewEventView.swift */; };
+		A4DA9E84B07C37B96D4AFDA3 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E50DF1472C7505403696F /* Course.swift */; };
+		A51B3E1F7C29456C957C1476 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74B47E7F14A49C2DF292A3 /* LoginView.swift */; };
+		A84F5FCAFE5C926236DD2C00 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F5D93C50ADB7370397F01 /* AppConfig.swift */; };
+		ABDAD83BD247BA0FF69C3D3B /* AITutorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F13E6E49AD18FECCA6F93F /* AITutorView.swift */; };
+		ABF2919797CD8E10BEA306C0 /* AIConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A1E3F4E5A3F6EDD75C157 /* AIConversation.swift */; };
+		AD997EB09CA91F2173EB0A57 /* CalendarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A26DE270D20FC0B8650B73 /* CalendarRepository.swift */; };
+		ADE053043FBC907ABB7940FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA9A0080E654006AE5E2470 /* Assets.xcassets */; };
+		AE1FA99E21E1D4619D3DD773 /* SocialEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04BEED94381FE47BEA8E81 /* SocialEventDetailView.swift */; };
+		AECF64DDDA9D42AD8471ECE0 /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892D07272D590B5BA19209D5 /* AIService.swift */; };
+		B3C7EF0AB7685A66393C4C28 /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFD0EB4C1E60AFE266959 /* Exam.swift */; };
+		B40651A3C69FE34F7BFBC8BC /* IncomeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB3F40FE5A4B73C27C3950 /* IncomeSource.swift */; };
+		B555A9383B71DFA25AB1C09E /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DC4BF04A7C28B3B860CE0F /* ScheduleView.swift */; };
+		B9CD6FE6BEF6160425FD54D7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B28315B08696EB548C3B1BB /* OnboardingView.swift */; };
+		BECAA9B57167A388C7B03A54 /* IdentityStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF85C7AFC884DFD397AA41 /* IdentityStepView.swift */; };
+		C0BB0C78240D15388D5E042C /* CareerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7360F13B80C7B23CD38BA8 /* CareerRepository.swift */; };
+		C3C9B945A3106D12217756B0 /* SportRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54FE8D0B5DC5BC6DA96BD08 /* SportRepository.swift */; };
+		C42FE44891B1267E3558AD72 /* NewWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB66E7E4D16E664511ED7AD /* NewWorkoutView.swift */; };
+		C97A159910556F39017790A1 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BB07B547A82605DE52ABA1 /* FinanceView.swift */; };
+		CD9655491DE1F84E00B63ACE /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28838A1E0336CCC1C8F03800 /* UserRepository.swift */; };
+		CDAA1F0ACC67A1B7C6D14A68 /* BrutalistInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E371E74878509D1174694 /* BrutalistInput.swift */; };
+		CDCD638EE1A56DC25059912F /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B17B519D704F45828E7C68 /* Expense.swift */; };
+		D2EAD5A7A1A57F0A984F778F /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120A0452614CD9E52FEF02F /* FriendsView.swift */; };
+		D598A1BD4FC5A006B497E79A /* UniLife360Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704C39885781455F2D89032 /* UniLife360Tests.swift */; };
+		D68C5B1485B5DB2D1889B595 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AD766735BF217070C041B /* ChatView.swift */; };
+		D82C63609A73CFB2D8011E2A /* EventTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13BD5ADA9D557FD7E10D6AA /* EventTicket.swift */; };
+		D85CA0A0B9EFA302DF2F87E2 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF95B18B03AA577CABD1964 /* DashboardViewModel.swift */; };
+		D92766BAF0CB217543CD170D /* BrutalistCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A33794AA89047AE3C1648A /* BrutalistCard.swift */; };
+		D977F65E3158D78CD9C3B1E7 /* ApplicationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81D53FA7B809ECD09AFA10 /* ApplicationDetailView.swift */; };
+		DA9CA25A489E307D39B0FB76 /* ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD173A8DCD5452EE92493C40 /* ProgressRing.swift */; };
+		DC64F2028D4D6E518D2BA27E /* SocialRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FB697C69BEF511C79C608 /* SocialRepository.swift */; };
+		E30A30E9AEE12A26070390E8 /* RealtimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60748D5A1316578929384982 /* RealtimeService.swift */; };
+		E5B29059374E055567A2A6DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9589603A3D11F2F06D6F3 /* User.swift */; };
+		EFAC187353462EBA76230963 /* SportWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C487BD75119521E8FD5ED2 /* SportWorkout.swift */; };
+		F0BF9FAC35B48F9069FD604C /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEA32ED283AC6D46AE480B /* SupabaseClient.swift */; };
+		F3B399FECEA72F0BB6749A20 /* FinanceStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EA6D3AFD9FA63864F0F66 /* FinanceStepView.swift */; };
+		F3F21F8429E4DCEE686EDEE9 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FAA511FBF02DBE18A6C17 /* SocialView.swift */; };
+		FDD05D5DD0735B0DAB92FCB4 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F980F355ABA2529BAF6377 /* CourseDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		967DDCA110FB7DA6CE9B6A31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EE245EF040CE35E897385E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 905227D4602A2642E137EC18;
+			remoteInfo = UniLife360;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007F257E5B0B2ED9393B2FA1 /* Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadows.swift; sourceTree = "<group>"; };
+		0469CAC958A8511FF03B2057 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		05552382DA08301F31CCF456 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		06F980F355ABA2529BAF6377 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
+		078F624E9D3D85986F1102E5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		07C0DC6EF3E7A818C6A57545 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		0C81D53FA7B809ECD09AFA10 /* ApplicationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDetailView.swift; sourceTree = "<group>"; };
+		0E04BEED94381FE47BEA8E81 /* SocialEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialEventDetailView.swift; sourceTree = "<group>"; };
+		0F7360F13B80C7B23CD38BA8 /* CareerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerRepository.swift; sourceTree = "<group>"; };
+		11DB589D76FA96EA4E9FD124 /* UniLife360.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = UniLife360.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F8C252FB1014CA8B9DDFB0 /* DMConversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMConversation.swift; sourceTree = "<group>"; };
+		1468671F003EDF26C7ADEDA0 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		18CF294C9A35C19DF01F03DC /* CircleDiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDiscoverView.swift; sourceTree = "<group>"; };
+		1B7E50DF1472C7505403696F /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		217CFD0EB4C1E60AFE266959 /* Exam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
+		25488CA209F22541D1387DE5 /* AppDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDestination.swift; sourceTree = "<group>"; };
+		260B740F17579853D55AE161 /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
+		263E371E74878509D1174694 /* BrutalistInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrutalistInput.swift; sourceTree = "<group>"; };
+		27CEA32ED283AC6D46AE480B /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
+		28838A1E0336CCC1C8F03800 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		28B6C0F59CE7BF4554F913F4 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		29C487BD75119521E8FD5ED2 /* SportWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportWorkout.swift; sourceTree = "<group>"; };
+		2F4C25D78491FD707CF0B22D /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		36BFBC875B3027A0B01F5305 /* FriendsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRepository.swift; sourceTree = "<group>"; };
+		3704C39885781455F2D89032 /* UniLife360Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniLife360Tests.swift; sourceTree = "<group>"; };
+		3EF47BDEA92E95CCCE011120 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		3EF95B18B03AA577CABD1964 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		45A6C5BC5B896653D58C9FC7 /* FriendProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileView.swift; sourceTree = "<group>"; };
+		46A33794AA89047AE3C1648A /* BrutalistCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrutalistCard.swift; sourceTree = "<group>"; };
+		47AE6D5CA2FFDAFEBACAB016 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		47BC8EBADE2EFC6702D69709 /* AcademicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicViewModel.swift; sourceTree = "<group>"; };
+		4B28315B08696EB548C3B1BB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		4C6626E552F149B38E8F0D9A /* NewEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventView.swift; sourceTree = "<group>"; };
+		4E7F5D93C50ADB7370397F01 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		4F2329F0730BB0940F3C0E36 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4FB858585231D1CDC6CDEE25 /* SummaryStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryStepView.swift; sourceTree = "<group>"; };
+		5027DA276668E1052482BA0A /* Friendship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friendship.swift; sourceTree = "<group>"; };
+		5BB66E7E4D16E664511ED7AD /* NewWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutView.swift; sourceTree = "<group>"; };
+		60748D5A1316578929384982 /* RealtimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeService.swift; sourceTree = "<group>"; };
+		615A1E3F4E5A3F6EDD75C157 /* AIConversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIConversation.swift; sourceTree = "<group>"; };
+		6565389D41809BFEF649B5F0 /* CircleMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMember.swift; sourceTree = "<group>"; };
+		658F52133C1715BABD8E41EB /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		65F13E6E49AD18FECCA6F93F /* AITutorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITutorView.swift; sourceTree = "<group>"; };
+		6776FF9F4D9BCC9AF1BABA0E /* SocialEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialEnums.swift; sourceTree = "<group>"; };
+		6EA9A0080E654006AE5E2470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7458CA9AA47C7108D5FCE0B3 /* CircleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDetailView.swift; sourceTree = "<group>"; };
+		750EA3EEDB781A3DED803B8D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		77A1AAC373BB69391492A367 /* TransactionEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEnums.swift; sourceTree = "<group>"; };
+		79F259F984BEE2DBA8E2FFDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A90BE44F1D78B2778A1C253 /* AcademicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicRepository.swift; sourceTree = "<group>"; };
+		7FD16C163F69F4FA3B528D38 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		8174CB71DECA372F56C0D675 /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		87CF296722409B9C5F9D7FF8 /* CareerEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerEnums.swift; sourceTree = "<group>"; };
+		881FAA511FBF02DBE18A6C17 /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
+		890F72EB8D42A0C5CFE92FFF /* UniLife360App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniLife360App.swift; sourceTree = "<group>"; };
+		892D07272D590B5BA19209D5 /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
+		8D5EA6D3AFD9FA63864F0F66 /* FinanceStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceStepView.swift; sourceTree = "<group>"; };
+		9C097E7DCE0636DE4FEC49ED /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		9FFAF869FF2CA0AAE4596CAC /* UniLife360Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = UniLife360Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56AD766735BF217070C041B /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		A6ED0E5B7054F105065F7BA3 /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
+		A6F68EB8AE18D4F896DD1F82 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		A7A494F45936C9A3C6C2CBFB /* StudiesStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudiesStepView.swift; sourceTree = "<group>"; };
+		A7C043428EE5EF1FC9546BEB /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		A851A6A0E07CD8E892C881D4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB545CBD263E6A7CCA3DC94D /* ModuleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleHeader.swift; sourceTree = "<group>"; };
+		AD173A8DCD5452EE92493C40 /* ProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRing.swift; sourceTree = "<group>"; };
+		ADA78F80BA61202B334CA5BC /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		AF2081A30BB40D31D298D31E /* FriendRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsView.swift; sourceTree = "<group>"; };
+		AF74B47E7F14A49C2DF292A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AFACED7C78937DCF3258BADD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		B0DC4BF04A7C28B3B860CE0F /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		B13BD5ADA9D557FD7E10D6AA /* EventTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTicket.swift; sourceTree = "<group>"; };
+		B2C17E4C1C089934C64DF462 /* EventEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEnums.swift; sourceTree = "<group>"; };
+		B4BB07B547A82605DE52ABA1 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
+		B5B17B519D704F45828E7C68 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		B87FB697C69BEF511C79C608 /* SocialRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialRepository.swift; sourceTree = "<group>"; };
+		BD7EBD380DB4BC148F1617AE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		BEA9589603A3D11F2F06D6F3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BEBE46E2D6B9CE9148776E4C /* StatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCard.swift; sourceTree = "<group>"; };
+		C3C008023445426A2E6CFA69 /* SocialEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialEvent.swift; sourceTree = "<group>"; };
+		C7876A20E5B20E34C110FEEA /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		CFBB1102C9C14E9708D23D63 /* FinanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewModel.swift; sourceTree = "<group>"; };
+		CFCD91A27F94E9C81ADB4438 /* AcademicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicView.swift; sourceTree = "<group>"; };
+		D1A26DE270D20FC0B8650B73 /* CalendarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRepository.swift; sourceTree = "<group>"; };
+		D5AF85C7AFC884DFD397AA41 /* IdentityStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityStepView.swift; sourceTree = "<group>"; };
+		D80BBF56865A9F767F1EFF0A /* AcademicEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicEnums.swift; sourceTree = "<group>"; };
+		E0F54242E5801FE708FA1884 /* ModuleColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleColors.swift; sourceTree = "<group>"; };
+		E11FB211A088B8E254EC62BC /* FinancialProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialProfile.swift; sourceTree = "<group>"; };
+		E2A4E0A8164D7B83D28B507B /* NewTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionView.swift; sourceTree = "<group>"; };
+		E4639F02908AEC9848BEDF66 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		E46CC12240AA39B6A325D1E4 /* NewApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewApplicationView.swift; sourceTree = "<group>"; };
+		E53BDE46B8AD7440D5CC113F /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
+		E54FE8D0B5DC5BC6DA96BD08 /* SportRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRepository.swift; sourceTree = "<group>"; };
+		E6F7BC1AB92E3961374FD4AF /* DirectMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessage.swift; sourceTree = "<group>"; };
+		E74583D06A4567D7E3D92B90 /* BrutalistModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrutalistModifiers.swift; sourceTree = "<group>"; };
+		EDCB3F40FE5A4B73C27C3950 /* IncomeSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeSource.swift; sourceTree = "<group>"; };
+		F120A0452614CD9E52FEF02F /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		F5E6460BF411AEC954E0C037 /* FinanceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceRepository.swift; sourceTree = "<group>"; };
+		F94C83717C5D0623EDC9C3E1 /* FinanceAdvisorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceAdvisorView.swift; sourceTree = "<group>"; };
+		F9F7D14AC41E2E2008B851CE /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		FBA2ED8E3FAA346912AD940C /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
+		FCE70D9533BBE9C2B9E0198B /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		FE0BB049C00F8940E6DB7E41 /* BrutalistButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrutalistButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBC43B002E84A1AC055C45FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EEEEEBFB863FBCB1592A37E /* Supabase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080D01D6B043D7A1338CA5EC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4E7F5D93C50ADB7370397F01 /* AppConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0C49D802A789B8CF2D36835B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4B28315B08696EB548C3B1BB /* OnboardingView.swift */,
+				750EA3EEDB781A3DED803B8D /* OnboardingViewModel.swift */,
+				9A72C16C0B00013A3AE52336 /* Steps */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0CCC4308FEF0C57A0086AA92 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A851A6A0E07CD8E892C881D4 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		47F5CB8A9E885E471325FC38 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				892D07272D590B5BA19209D5 /* AIService.swift */,
+				27CEA32ED283AC6D46AE480B /* SupabaseClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4A370A9E71AFBC821F1B1172 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				25488CA209F22541D1387DE5 /* AppDestination.swift */,
+				3EF47BDEA92E95CCCE011120 /* AppRouter.swift */,
+				7FD16C163F69F4FA3B528D38 /* TabBarView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		50F268E1AC99FAB29227B199 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				A56AD766735BF217070C041B /* ChatView.swift */,
+				45A6C5BC5B896653D58C9FC7 /* FriendProfileView.swift */,
+				AF2081A30BB40D31D298D31E /* FriendRequestsView.swift */,
+				F120A0452614CD9E52FEF02F /* FriendsView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		56A3057E4200CA00F940C7A0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4F2329F0730BB0940F3C0E36 /* AuthService.swift */,
+				C7876A20E5B20E34C110FEEA /* HapticFeedback.swift */,
+				60748D5A1316578929384982 /* RealtimeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5AB16C454475744B9FA9F6DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				615A1E3F4E5A3F6EDD75C157 /* AIConversation.swift */,
+				FCE70D9533BBE9C2B9E0198B /* Application.swift */,
+				8174CB71DECA372F56C0D675 /* CalendarEvent.swift */,
+				F9F7D14AC41E2E2008B851CE /* Circle.swift */,
+				6565389D41809BFEF649B5F0 /* CircleMember.swift */,
+				1468671F003EDF26C7ADEDA0 /* Company.swift */,
+				1B7E50DF1472C7505403696F /* Course.swift */,
+				E6F7BC1AB92E3961374FD4AF /* DirectMessage.swift */,
+				13F8C252FB1014CA8B9DDFB0 /* DMConversation.swift */,
+				B13BD5ADA9D557FD7E10D6AA /* EventTicket.swift */,
+				217CFD0EB4C1E60AFE266959 /* Exam.swift */,
+				B5B17B519D704F45828E7C68 /* Expense.swift */,
+				E11FB211A088B8E254EC62BC /* FinancialProfile.swift */,
+				5027DA276668E1052482BA0A /* Friendship.swift */,
+				EDCB3F40FE5A4B73C27C3950 /* IncomeSource.swift */,
+				A7C043428EE5EF1FC9546BEB /* Job.swift */,
+				0469CAC958A8511FF03B2057 /* Note.swift */,
+				C3C008023445426A2E6CFA69 /* SocialEvent.swift */,
+				29C487BD75119521E8FD5ED2 /* SportWorkout.swift */,
+				BEA9589603A3D11F2F06D6F3 /* User.swift */,
+				F4FC8B23FA01F165745877F9 /* Enums */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5CF2082DC7F92EB57C255FB4 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				E74583D06A4567D7E3D92B90 /* BrutalistModifiers.swift */,
+				E0F54242E5801FE708FA1884 /* ModuleColors.swift */,
+				007F257E5B0B2ED9393B2FA1 /* Shadows.swift */,
+				9C097E7DCE0636DE4FEC49ED /* Theme.swift */,
+				A6F68EB8AE18D4F896DD1F82 /* Typography.swift */,
+				ECA8C53F5CECDC62CD78A17D /* Components */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		69A143A3B94A39D5DBFB89BB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AFACED7C78937DCF3258BADD /* AuthViewModel.swift */,
+				AF74B47E7F14A49C2DF292A3 /* LoginView.swift */,
+				BD7EBD380DB4BC148F1617AE /* RegisterView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		6A67C5BBD7F5CF1E8330AF3A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				080D01D6B043D7A1338CA5EC /* Config */,
+				5CF2082DC7F92EB57C255FB4 /* DesignSystem */,
+				4A370A9E71AFBC821F1B1172 /* Navigation */,
+				47F5CB8A9E885E471325FC38 /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6CD604047E33006F68F17AD8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6EA9A0080E654006AE5E2470 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7020F649185C4C5701AE1FF4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				79F259F984BEE2DBA8E2FFDF /* ContentView.swift */,
+				890F72EB8D42A0C5CFE92FFF /* UniLife360App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7117613278D9E45B63B881BA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7A90BE44F1D78B2778A1C253 /* AcademicRepository.swift */,
+				078F624E9D3D85986F1102E5 /* AuthRepository.swift */,
+				D1A26DE270D20FC0B8650B73 /* CalendarRepository.swift */,
+				0F7360F13B80C7B23CD38BA8 /* CareerRepository.swift */,
+				F5E6460BF411AEC954E0C037 /* FinanceRepository.swift */,
+				36BFBC875B3027A0B01F5305 /* FriendsRepository.swift */,
+				B87FB697C69BEF511C79C608 /* SocialRepository.swift */,
+				E54FE8D0B5DC5BC6DA96BD08 /* SportRepository.swift */,
+				28838A1E0336CCC1C8F03800 /* UserRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		75FA0131AE68CB49B1BC8B25 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2F4C25D78491FD707CF0B22D /* EditProfileView.swift */,
+				47AE6D5CA2FFDAFEBACAB016 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		8D924107942D509F938072CC /* UniLife360Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3704C39885781455F2D89032 /* UniLife360Tests.swift */,
+			);
+			path = UniLife360Tests;
+			sourceTree = "<group>";
+		};
+		95AECAEA7D0B6C528B3A3AF2 /* Career */ = {
+			isa = PBXGroup;
+			children = (
+				0C81D53FA7B809ECD09AFA10 /* ApplicationDetailView.swift */,
+				FBA2ED8E3FAA346912AD940C /* CareerView.swift */,
+				A6ED0E5B7054F105065F7BA3 /* JobDetailView.swift */,
+				E46CC12240AA39B6A325D1E4 /* NewApplicationView.swift */,
+			);
+			path = Career;
+			sourceTree = "<group>";
+		};
+		99F70E8C6671E38A069E7C51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11DB589D76FA96EA4E9FD124 /* UniLife360.app */,
+				9FFAF869FF2CA0AAE4596CAC /* UniLife360Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A72C16C0B00013A3AE52336 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				8D5EA6D3AFD9FA63864F0F66 /* FinanceStepView.swift */,
+				D5AF85C7AFC884DFD397AA41 /* IdentityStepView.swift */,
+				A7A494F45936C9A3C6C2CBFB /* StudiesStepView.swift */,
+				4FB858585231D1CDC6CDEE25 /* SummaryStepView.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		A04FF2DA8A6985B784D24F21 /* Sport */ = {
+			isa = PBXGroup;
+			children = (
+				5BB66E7E4D16E664511ED7AD /* NewWorkoutView.swift */,
+				E53BDE46B8AD7440D5CC113F /* SportView.swift */,
+			);
+			path = Sport;
+			sourceTree = "<group>";
+		};
+		A90DCE8D5ABA07ABA482141B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B348F1F60664D4F253C892C9 /* Academic */,
+				69A143A3B94A39D5DBFB89BB /* Auth */,
+				95AECAEA7D0B6C528B3A3AF2 /* Career */,
+				B19313F7F6B8F28F503F4B3C /* Dashboard */,
+				C242A05DE9B861CD8EBB625E /* Finance */,
+				50F268E1AC99FAB29227B199 /* Friends */,
+				0C49D802A789B8CF2D36835B /* Onboarding */,
+				75FA0131AE68CB49B1BC8B25 /* Profile */,
+				F40DA9E27A55808996A2B358 /* Schedule */,
+				0CCC4308FEF0C57A0086AA92 /* Settings */,
+				B97B35F22DCC158FF13E11CB /* Social */,
+				A04FF2DA8A6985B784D24F21 /* Sport */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B19313F7F6B8F28F503F4B3C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				28B6C0F59CE7BF4554F913F4 /* DashboardView.swift */,
+				3EF95B18B03AA577CABD1964 /* DashboardViewModel.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		B348F1F60664D4F253C892C9 /* Academic */ = {
+			isa = PBXGroup;
+			children = (
+				CFCD91A27F94E9C81ADB4438 /* AcademicView.swift */,
+				47BC8EBADE2EFC6702D69709 /* AcademicViewModel.swift */,
+				65F13E6E49AD18FECCA6F93F /* AITutorView.swift */,
+				06F980F355ABA2529BAF6377 /* CourseDetailView.swift */,
+				260B740F17579853D55AE161 /* NoteDetailView.swift */,
+			);
+			path = Academic;
+			sourceTree = "<group>";
+		};
+		B97B35F22DCC158FF13E11CB /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				7458CA9AA47C7108D5FCE0B3 /* CircleDetailView.swift */,
+				18CF294C9A35C19DF01F03DC /* CircleDiscoverView.swift */,
+				0E04BEED94381FE47BEA8E81 /* SocialEventDetailView.swift */,
+				881FAA511FBF02DBE18A6C17 /* SocialView.swift */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		C242A05DE9B861CD8EBB625E /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				F94C83717C5D0623EDC9C3E1 /* FinanceAdvisorView.swift */,
+				B4BB07B547A82605DE52ABA1 /* FinanceView.swift */,
+				CFBB1102C9C14E9708D23D63 /* FinanceViewModel.swift */,
+				E2A4E0A8164D7B83D28B507B /* NewTransactionView.swift */,
+				E4E6AA86E997E40E23201907 /* Components */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
+		C9F7DCE328052EC9BF8B1BD8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5AB16C454475744B9FA9F6DB /* Models */,
+				7117613278D9E45B63B881BA /* Repositories */,
+				56A3057E4200CA00F940C7A0 /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CED78E72F99076201300D3A1 = {
+			isa = PBXGroup;
+			children = (
+				D440644EC6EE40A3AF0005B3 /* UniLife360 */,
+				8D924107942D509F938072CC /* UniLife360Tests */,
+				99F70E8C6671E38A069E7C51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D440644EC6EE40A3AF0005B3 /* UniLife360 */ = {
+			isa = PBXGroup;
+			children = (
+				7020F649185C4C5701AE1FF4 /* App */,
+				6A67C5BBD7F5CF1E8330AF3A /* Core */,
+				C9F7DCE328052EC9BF8B1BD8 /* Data */,
+				A90DCE8D5ABA07ABA482141B /* Features */,
+				6CD604047E33006F68F17AD8 /* Resources */,
+			);
+			path = UniLife360;
+			sourceTree = "<group>";
+		};
+		E4E6AA86E997E40E23201907 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E4639F02908AEC9848BEDF66 /* TransactionRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ECA8C53F5CECDC62CD78A17D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE0BB049C00F8940E6DB7E41 /* BrutalistButton.swift */,
+				46A33794AA89047AE3C1648A /* BrutalistCard.swift */,
+				263E371E74878509D1174694 /* BrutalistInput.swift */,
+				658F52133C1715BABD8E41EB /* EmptyStateView.swift */,
+				AB545CBD263E6A7CCA3DC94D /* ModuleHeader.swift */,
+				07C0DC6EF3E7A818C6A57545 /* ProgressBar.swift */,
+				AD173A8DCD5452EE92493C40 /* ProgressRing.swift */,
+				BEBE46E2D6B9CE9148776E4C /* StatCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F40DA9E27A55808996A2B358 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				ADA78F80BA61202B334CA5BC /* EventDetailView.swift */,
+				4C6626E552F149B38E8F0D9A /* NewEventView.swift */,
+				B0DC4BF04A7C28B3B860CE0F /* ScheduleView.swift */,
+				05552382DA08301F31CCF456 /* ScheduleViewModel.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		F4FC8B23FA01F165745877F9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D80BBF56865A9F767F1EFF0A /* AcademicEnums.swift */,
+				87CF296722409B9C5F9D7FF8 /* CareerEnums.swift */,
+				B2C17E4C1C089934C64DF462 /* EventEnums.swift */,
+				6776FF9F4D9BCC9AF1BABA0E /* SocialEnums.swift */,
+				77A1AAC373BB69391492A367 /* TransactionEnums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		905227D4602A2642E137EC18 /* UniLife360 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C66531198F8C1131B6A2BC8 /* Build configuration list for PBXNativeTarget "UniLife360" */;
+			buildPhases = (
+				3C053F240A4049022F6F8026 /* Sources */,
+				F647B819EABD552C14723178 /* Resources */,
+				CBC43B002E84A1AC055C45FC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UniLife360;
+			packageProductDependencies = (
+				4C8C9625784A61EB8AA4A0C5 /* Supabase */,
+			);
+			productName = UniLife360;
+			productReference = 11DB589D76FA96EA4E9FD124 /* UniLife360.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9071AF457AE2055EEBA4AEE /* UniLife360Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9463F9E385034FAA25785D0 /* Build configuration list for PBXNativeTarget "UniLife360Tests" */;
+			buildPhases = (
+				5BB687D33A384BE8F35FA9E0 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9ABD69258E9EA368C3C267D /* PBXTargetDependency */,
+			);
+			name = UniLife360Tests;
+			packageProductDependencies = (
+			);
+			productName = UniLife360Tests;
+			productReference = 9FFAF869FF2CA0AAE4596CAC /* UniLife360Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EE245EF040CE35E897385E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					905227D4602A2642E137EC18 = {
+						DevelopmentTeam = "";
+					};
+					A9071AF457AE2055EEBA4AEE = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 8927D6D65891D6025DB0D511 /* Build configuration list for PBXProject "UniLife360" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CED78E72F99076201300D3A1;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				95FAA651A19EC9B6418CC3C8 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 99F70E8C6671E38A069E7C51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				905227D4602A2642E137EC18 /* UniLife360 */,
+				A9071AF457AE2055EEBA4AEE /* UniLife360Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F647B819EABD552C14723178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE053043FBC907ABB7940FB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C053F240A4049022F6F8026 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF2919797CD8E10BEA306C0 /* AIConversation.swift in Sources */,
+				AECF64DDDA9D42AD8471ECE0 /* AIService.swift in Sources */,
+				ABDAD83BD247BA0FF69C3D3B /* AITutorView.swift in Sources */,
+				98ADF3D75A0AC10C5A7046E9 /* AcademicEnums.swift in Sources */,
+				A3E1A103101852897FD365E2 /* AcademicRepository.swift in Sources */,
+				135EEE81254ED22B86F26602 /* AcademicView.swift in Sources */,
+				71D15FB252CD873EAE3C7DB0 /* AcademicViewModel.swift in Sources */,
+				A84F5FCAFE5C926236DD2C00 /* AppConfig.swift in Sources */,
+				9506D214EE739CF8FD197922 /* AppDestination.swift in Sources */,
+				7D118BC3331C6ECE4588D827 /* AppRouter.swift in Sources */,
+				5FCC827C6196D9B5C08E5CA6 /* Application.swift in Sources */,
+				D977F65E3158D78CD9C3B1E7 /* ApplicationDetailView.swift in Sources */,
+				5F4967C8D6BAEC5649218DA9 /* AuthRepository.swift in Sources */,
+				A271B9BCFD62436EDAE92B9E /* AuthService.swift in Sources */,
+				557E3BADE2B49CB35426166C /* AuthViewModel.swift in Sources */,
+				91286518D6BAAE87B01E5856 /* BrutalistButton.swift in Sources */,
+				D92766BAF0CB217543CD170D /* BrutalistCard.swift in Sources */,
+				CDAA1F0ACC67A1B7C6D14A68 /* BrutalistInput.swift in Sources */,
+				645B213C638EAF7CD690BEF8 /* BrutalistModifiers.swift in Sources */,
+				3655DB5387E9CEB8E3C0091C /* CalendarEvent.swift in Sources */,
+				AD997EB09CA91F2173EB0A57 /* CalendarRepository.swift in Sources */,
+				096AC0C3F8420106DC4DCD7A /* CareerEnums.swift in Sources */,
+				C0BB0C78240D15388D5E042C /* CareerRepository.swift in Sources */,
+				614745F0E28260269F1648C7 /* CareerView.swift in Sources */,
+				D68C5B1485B5DB2D1889B595 /* ChatView.swift in Sources */,
+				61B98E459715E107AEAE4F84 /* Circle.swift in Sources */,
+				196384C7D51AF24717BCFF37 /* CircleDetailView.swift in Sources */,
+				1ECEF76D7CCF5D594A5D1A2D /* CircleDiscoverView.swift in Sources */,
+				397B8B8EC387FE5B01C55DB0 /* CircleMember.swift in Sources */,
+				3E020594E59533EA43E63000 /* Company.swift in Sources */,
+				767F23DDA9154FCAE6414695 /* ContentView.swift in Sources */,
+				A4DA9E84B07C37B96D4AFDA3 /* Course.swift in Sources */,
+				FDD05D5DD0735B0DAB92FCB4 /* CourseDetailView.swift in Sources */,
+				389CA5CF62A19C42F8F1DC1F /* DMConversation.swift in Sources */,
+				4675BBF8B1FA80B2EB166F61 /* DashboardView.swift in Sources */,
+				D85CA0A0B9EFA302DF2F87E2 /* DashboardViewModel.swift in Sources */,
+				2EC8095E66DC65EB1677FC06 /* DirectMessage.swift in Sources */,
+				11F9753F2D2D14AC13D60B82 /* EditProfileView.swift in Sources */,
+				78F5EF8A744D47C13AEB0CDA /* EmptyStateView.swift in Sources */,
+				8CA0D5EB9829489B971893FC /* EventDetailView.swift in Sources */,
+				638B6BC2B579CC426F6D7A4C /* EventEnums.swift in Sources */,
+				D82C63609A73CFB2D8011E2A /* EventTicket.swift in Sources */,
+				B3C7EF0AB7685A66393C4C28 /* Exam.swift in Sources */,
+				CDCD638EE1A56DC25059912F /* Expense.swift in Sources */,
+				3C8833857E2905986CF222F9 /* FinanceAdvisorView.swift in Sources */,
+				0C05EAD013F8301E57FF1F32 /* FinanceRepository.swift in Sources */,
+				F3B399FECEA72F0BB6749A20 /* FinanceStepView.swift in Sources */,
+				C97A159910556F39017790A1 /* FinanceView.swift in Sources */,
+				1768745AA0C9A7861E6AED13 /* FinanceViewModel.swift in Sources */,
+				933283DDBC373403D0E7948D /* FinancialProfile.swift in Sources */,
+				90910B84B64612B9537F562F /* FriendProfileView.swift in Sources */,
+				7D108A7B7E55C0EFACCC1907 /* FriendRequestsView.swift in Sources */,
+				4773642A4518C7A9F6B94FC8 /* FriendsRepository.swift in Sources */,
+				D2EAD5A7A1A57F0A984F778F /* FriendsView.swift in Sources */,
+				6C50A1807E9CA5AB22488485 /* Friendship.swift in Sources */,
+				6B3DA301F26B23DDDEC4BD84 /* HapticFeedback.swift in Sources */,
+				BECAA9B57167A388C7B03A54 /* IdentityStepView.swift in Sources */,
+				B40651A3C69FE34F7BFBC8BC /* IncomeSource.swift in Sources */,
+				04F1825A5D570090DD0843C4 /* Job.swift in Sources */,
+				9B208F5B690C7A83ACAE4705 /* JobDetailView.swift in Sources */,
+				A51B3E1F7C29456C957C1476 /* LoginView.swift in Sources */,
+				3B8062966239BE79384B1902 /* ModuleColors.swift in Sources */,
+				1CDCE43A4061758E03B8D826 /* ModuleHeader.swift in Sources */,
+				8048AB24ECCCD0752FEF6113 /* NewApplicationView.swift in Sources */,
+				A41D73FB34232C3DD7BD1D01 /* NewEventView.swift in Sources */,
+				091C2F5ADEEC33CB2CE6F052 /* NewTransactionView.swift in Sources */,
+				C42FE44891B1267E3558AD72 /* NewWorkoutView.swift in Sources */,
+				63899F96F3C38F32A32BBF36 /* Note.swift in Sources */,
+				1F527D7B9FA38A6AB3D9F94A /* NoteDetailView.swift in Sources */,
+				B9CD6FE6BEF6160425FD54D7 /* OnboardingView.swift in Sources */,
+				85B724A3168D0754DFA21FDA /* OnboardingViewModel.swift in Sources */,
+				5912948FA5F6BEA202D3A30B /* ProfileView.swift in Sources */,
+				68172428F05D8BEEC9E636A8 /* ProgressBar.swift in Sources */,
+				DA9CA25A489E307D39B0FB76 /* ProgressRing.swift in Sources */,
+				E30A30E9AEE12A26070390E8 /* RealtimeService.swift in Sources */,
+				6BA94A9DD499D3BC7D68A74C /* RegisterView.swift in Sources */,
+				B555A9383B71DFA25AB1C09E /* ScheduleView.swift in Sources */,
+				63101A4E57DAB0BF36B3EAFE /* ScheduleViewModel.swift in Sources */,
+				8637C806A627D70ADBBCC8A7 /* SettingsView.swift in Sources */,
+				4FB7AA1F9585809C580F5F46 /* Shadows.swift in Sources */,
+				06CFBE17B95599812B1BA557 /* SocialEnums.swift in Sources */,
+				80FF781D5ED14A292956F318 /* SocialEvent.swift in Sources */,
+				AE1FA99E21E1D4619D3DD773 /* SocialEventDetailView.swift in Sources */,
+				DC64F2028D4D6E518D2BA27E /* SocialRepository.swift in Sources */,
+				F3F21F8429E4DCEE686EDEE9 /* SocialView.swift in Sources */,
+				C3C9B945A3106D12217756B0 /* SportRepository.swift in Sources */,
+				4E8258281CAAEA48959B5B3E /* SportView.swift in Sources */,
+				EFAC187353462EBA76230963 /* SportWorkout.swift in Sources */,
+				2D66B4D25F11A28F4B616D05 /* StatCard.swift in Sources */,
+				49B4FD0419C9CDE7528E539F /* StudiesStepView.swift in Sources */,
+				8023692A1A5314A6738B000B /* SummaryStepView.swift in Sources */,
+				F0BF9FAC35B48F9069FD604C /* SupabaseClient.swift in Sources */,
+				1E9EBD227F7246A4B57A4DED /* TabBarView.swift in Sources */,
+				14B6ACAC2724A2A3A3A41093 /* Theme.swift in Sources */,
+				06B0D520E83A63C4EC17F6D6 /* TransactionEnums.swift in Sources */,
+				37BD3A9778AD63B47B0910AB /* TransactionRow.swift in Sources */,
+				6C4F6D792A7785FA4666648E /* Typography.swift in Sources */,
+				64EFB0067B94F860388A3366 /* UniLife360App.swift in Sources */,
+				E5B29059374E055567A2A6DB /* User.swift in Sources */,
+				CD9655491DE1F84E00B63ACE /* UserRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB687D33A384BE8F35FA9E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D598A1BD4FC5A006B497E79A /* UniLife360Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9ABD69258E9EA368C3C267D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 905227D4602A2642E137EC18 /* UniLife360 */;
+			targetProxy = 967DDCA110FB7DA6CE9B6A31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06BBB884D12289D9004CEB58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		30A4310450DA42E57B2976D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "UniLife 360";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "UniLife 360 synchronise ton emploi du temps avec ton calendrier";
+				INFOPLIST_KEY_NSCameraUsageDescription = "UniLife 360 utilise la caméra pour scanner tes tickets de caisse";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "UniLife 360 utilise ta photothèque pour ton avatar";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unilife360.app;
+				PRODUCT_NAME = "UniLife 360";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91F2D2F55AC8D0DFF03C8060 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unilife360.UniLife360Tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UniLife360.app/UniLife360";
+			};
+			name = Debug;
+		};
+		AC241FED89260B2645C1D654 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unilife360.UniLife360Tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UniLife360.app/UniLife360";
+			};
+			name = Release;
+		};
+		D3D6AD9925F5B7914499A7F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "UniLife 360";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "UniLife 360 synchronise ton emploi du temps avec ton calendrier";
+				INFOPLIST_KEY_NSCameraUsageDescription = "UniLife 360 utilise la caméra pour scanner tes tickets de caisse";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "UniLife 360 utilise ta photothèque pour ton avatar";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unilife360.app;
+				PRODUCT_NAME = "UniLife 360";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D5AB1D8281B0305E73137480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8927D6D65891D6025DB0D511 /* Build configuration list for PBXProject "UniLife360" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06BBB884D12289D9004CEB58 /* Debug */,
+				D5AB1D8281B0305E73137480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C66531198F8C1131B6A2BC8 /* Build configuration list for PBXNativeTarget "UniLife360" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30A4310450DA42E57B2976D1 /* Debug */,
+				D3D6AD9925F5B7914499A7F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9463F9E385034FAA25785D0 /* Build configuration list for PBXNativeTarget "UniLife360Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F2D2F55AC8D0DFF03C8060 /* Debug */,
+				AC241FED89260B2645C1D654 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95FAA651A19EC9B6418CC3C8 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C8C9625784A61EB8AA4A0C5 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95FAA651A19EC9B6418CC3C8 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7EE245EF040CE35E897385E3 /* Project object */;
+}
