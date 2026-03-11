@@ -7,7 +7,7 @@ struct CareerRepository {
         var query = client
             .from("jobs")
             .select("*, company:companies(*)")
-            .eq("is_active", value: true)
+            .eq("is_active", value: "true")
             .order("created_at", ascending: false)
 
         if let type {
@@ -15,7 +15,7 @@ struct CareerRepository {
         }
 
         if let isRemote {
-            query = query.eq("is_remote", value: isRemote)
+            query = query.eq("is_remote", value: String(isRemote))
         }
 
         return try await query.limit(30).execute().value
@@ -42,13 +42,14 @@ struct CareerRepository {
     }
 
     func apply(jobId: UUID, userId: UUID, coverLetter: String?, resumeUrl: String?) async throws {
-        let application: [String: String?] = [
+        var application: [String: String] = [
             "job_id": jobId.uuidString,
             "user_id": userId.uuidString,
-            "cover_letter": coverLetter,
-            "resume_url": resumeUrl,
             "status": "pending"
         ]
+        if let coverLetter { application["cover_letter"] = coverLetter }
+        if let resumeUrl { application["resume_url"] = resumeUrl }
+
         try await client
             .from("applications")
             .insert(application)

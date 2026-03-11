@@ -81,7 +81,7 @@ struct SocialRepository {
         var dbQuery = client
             .from("circles")
             .select()
-            .eq("is_public", value: true)
+            .eq("is_public", value: "true")
             .limit(20)
 
         if let query, !query.isEmpty {
