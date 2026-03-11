@@ -8,7 +8,7 @@ struct SummaryStepView: View {
             // Success illustration
             VStack(spacing: 12) {
                 ZStack {
-                    Circle()
+                    SwiftUI.Circle()
                         .fill(
                             LinearGradient(
                                 colors: [
@@ -22,7 +22,7 @@ struct SummaryStepView: View {
                         )
                         .frame(width: 80, height: 80)
                         .overlay(
-                            Circle()
+                            SwiftUI.Circle()
                                 .stroke(Color(hex: "#0a0a0a"), lineWidth: 2)
                         )
                         .shadow(color: .black, radius: 0, x: 3, y: 3)
