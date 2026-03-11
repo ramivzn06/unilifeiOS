@@ -14,6 +14,12 @@ struct UniLife360App: App {
         WindowGroup {
             ContentView()
                 .environment(router)
+                .onOpenURL { url in
+                    // Handle OAuth callback (Google Sign-In redirect)
+                    Task {
+                        try? await SupabaseManager.shared.client.auth.session(from: url)
+                    }
+                }
         }
     }
 }

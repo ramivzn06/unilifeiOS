@@ -49,6 +49,22 @@ targets:
         GENERATE_INFOPLIST_FILE: true
         PRODUCT_BUNDLE_IDENTIFIER: com.unilife360.app
         PRODUCT_NAME: "UniLife 360"
+        INFOPLIST_KEY_CFBundleURLTypes: |
+          <array>
+            <dict>
+              <key>CFBundleURLName</key>
+              <string>com.unilife360.app</string>
+              <key>CFBundleURLSchemes</key>
+              <array>
+                <string>com.unilife360.app</string>
+              </array>
+            </dict>
+          </array>
+    entitlements:
+      path: UniLife360/UniLife360.entitlements
+      properties:
+        com.apple.developer.applesignin:
+          - Default
     dependencies:
       - package: Supabase
         product: Supabase

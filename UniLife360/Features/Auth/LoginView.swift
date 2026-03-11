@@ -131,27 +131,55 @@ struct LoginView: View {
                             .frame(height: 1)
                     }
 
-                    // MARK: - Apple Sign-In
-                    Button {
-                        HapticFeedback.tap()
-                        // Apple Sign-In flow would be implemented here
-                    } label: {
-                        HStack(spacing: 8) {
-                            Image(systemName: "apple.logo")
-                                .font(.system(size: 18))
-                            Text("Continuer avec Apple")
-                                .font(.system(size: 15, weight: .bold))
+                    // MARK: - Social Sign-In Buttons
+                    VStack(spacing: 12) {
+                        // Apple Sign-In
+                        Button {
+                            HapticFeedback.tap()
+                            viewModel.startAppleSignIn()
+                        } label: {
+                            HStack(spacing: 8) {
+                                Image(systemName: "apple.logo")
+                                    .font(.system(size: 18))
+                                Text("Continuer avec Apple")
+                                    .font(.system(size: 15, weight: .bold))
+                            }
+                            .foregroundStyle(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                            .background(Color(hex: "#0a0a0a"))
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color(hex: "#0a0a0a"), lineWidth: 2)
+                            )
+                            .shadow(color: .black.opacity(0.3), radius: 0, x: 3, y: 3)
                         }
-                        .foregroundStyle(Color(hex: "#0a0a0a"))
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color(hex: "#0a0a0a"), lineWidth: 2)
-                        )
-                        .shadow(color: .black, radius: 0, x: 3, y: 3)
+                        .disabled(viewModel.isLoading)
+
+                        // Google Sign-In
+                        Button {
+                            HapticFeedback.tap()
+                            Task { await viewModel.startGoogleSignIn() }
+                        } label: {
+                            HStack(spacing: 8) {
+                                Image(systemName: "globe")
+                                    .font(.system(size: 16, weight: .semibold))
+                                Text("Continuer avec Google")
+                                    .font(.system(size: 15, weight: .bold))
+                            }
+                            .foregroundStyle(Color(hex: "#0a0a0a"))
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color(hex: "#0a0a0a"), lineWidth: 2)
+                            )
+                            .shadow(color: .black.opacity(0.3), radius: 0, x: 3, y: 3)
+                        }
+                        .disabled(viewModel.isLoading)
                     }
 
                     // MARK: - Register Link

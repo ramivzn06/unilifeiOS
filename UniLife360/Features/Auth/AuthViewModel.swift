@@ -1,5 +1,6 @@
 import SwiftUI
 import Supabase
+import AuthenticationServices
 
 @Observable
 final class AuthViewModel {
@@ -12,8 +13,9 @@ final class AuthViewModel {
     var showError = false
 
     private let supabase = SupabaseManager.shared.client
+    private let appleSignInManager = AppleSignInManager()
 
-    // MARK: - Sign In
+    // MARK: - Sign In (Email/Password)
 
     func signIn() async {
         guard !email.isEmpty, !password.isEmpty else {
@@ -35,7 +37,7 @@ final class AuthViewModel {
         isLoading = false
     }
 
-    // MARK: - Sign Up
+    // MARK: - Sign Up (Email/Password)
 
     func signUp() async {
         guard !fullName.isEmpty, !email.isEmpty, !password.isEmpty else {
@@ -76,16 +78,65 @@ final class AuthViewModel {
 
     // MARK: - Sign In with Apple
 
-    func signInWithApple(idToken: String, nonce: String) async {
+    func startAppleSignIn() {
         isLoading = true
+        appleSignInManager.signIn { [weak self] result in
+            guard let self else { return }
+            Task { @MainActor in
+                switch result {
+                case .success(let credential):
+                    await self.completeAppleSignIn(
+                        idToken: credential.idToken,
+                        nonce: credential.nonce,
+                        fullName: credential.fullName
+                    )
+                case .failure(let error):
+                    self.isLoading = false
+                    if (error as? ASAuthorizationError)?.code != .canceled {
+                        self.showErrorMessage("Erreur Apple Sign-In: \(error.localizedDescription)")
+                        HapticFeedback.error()
+                    }
+                }
+            }
+        }
+    }
 
+    private func completeAppleSignIn(idToken: String, nonce: String, fullName: String?) async {
         do {
             try await supabase.auth.signInWithIdToken(
                 credentials: .init(provider: .apple, idToken: idToken, nonce: nonce)
             )
+
+            // Update full name if Apple provided it (first sign-in only)
+            if let fullName, !fullName.isEmpty {
+                try? await supabase.auth.update(
+                    user: UserAttributes(
+                        data: ["full_name": .string(fullName)]
+                    )
+                )
+            }
+
             HapticFeedback.success()
         } catch {
             showErrorMessage("Erreur Apple Sign-In")
+            HapticFeedback.error()
+        }
+
+        isLoading = false
+    }
+
+    // MARK: - Sign In with Google
+
+    func startGoogleSignIn() async {
+        isLoading = true
+
+        do {
+            try await supabase.auth.signInWithOAuth(
+                provider: .google,
+                redirectTo: URL(string: "com.unilife360.app://login-callback")
+            )
+        } catch {
+            showErrorMessage("Erreur Google Sign-In: \(error.localizedDescription)")
             HapticFeedback.error()
         }
 
